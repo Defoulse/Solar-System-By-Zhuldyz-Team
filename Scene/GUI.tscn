@@ -1,0 +1,173 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Script/GUI.gd" type="Script" id=1]
+
+[node name="GUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+
+[node name="Sun" type="VBoxContainer" parent="CenterContainer"]
+editor/display_folded = true
+visible = false
+margin_left = 458.0
+margin_top = -12.0
+margin_right = 565.0
+margin_bottom = 26.0
+
+[node name="Label" type="Label" parent="CenterContainer/Sun"]
+margin_right = 107.0
+margin_bottom = 14.0
+text = "The Sun"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/Sun"]
+margin_top = 18.0
+margin_right = 107.0
+margin_bottom = 38.0
+
+[node name="Button" type="Button" parent="CenterContainer/Sun/HBoxContainer"]
+margin_right = 107.0
+margin_bottom = 20.0
+text = "Create The Sun"
+
+[node name="Planets" type="VBoxContainer" parent="CenterContainer"]
+editor/display_folded = true
+visible = false
+margin_left = 424.0
+margin_top = -96.0
+margin_right = 600.0
+margin_bottom = 110.0
+
+[node name="Label" type="Label" parent="CenterContainer/Planets"]
+margin_right = 200.0
+margin_bottom = 14.0
+text = "Planets"
+align = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/Planets"]
+margin_top = 18.0
+margin_right = 200.0
+margin_bottom = 206.0
+
+[node name="HBoxContainer" type="VBoxContainer" parent="CenterContainer/Planets/HBoxContainer2"]
+margin_right = 200.0
+margin_bottom = 188.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/Planets/HBoxContainer2/HBoxContainer"]
+margin_right = 200.0
+margin_bottom = 20.0
+
+[node name="Mercury" type="Button" parent="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer"]
+margin_right = 64.0
+margin_bottom = 20.0
+text = "Mercury"
+
+[node name="Mercury_Size1" type="Button" parent="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer"]
+margin_left = 68.0
+margin_right = 88.0
+margin_bottom = 20.0
+text = "1"
+
+[node name="Mercury_Orbit" type="Button" parent="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer"]
+margin_left = 116.0
+margin_right = 160.0
+margin_bottom = 20.0
+text = "5000"
+
+[node name="Mercury_Self" type="Button" parent="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer"]
+margin_left = 164.0
+margin_right = 200.0
+margin_bottom = 20.0
+text = "100"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/Planets/HBoxContainer2/HBoxContainer"]
+margin_top = 24.0
+margin_right = 200.0
+margin_bottom = 44.0
+
+[node name="Venus" type="Button" parent="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer2"]
+margin_right = 51.0
+margin_bottom = 20.0
+text = "Venus"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CenterContainer/Planets/HBoxContainer2/HBoxContainer"]
+margin_top = 48.0
+margin_right = 200.0
+margin_bottom = 68.0
+
+[node name="Earth" type="Button" parent="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer3"]
+margin_right = 44.0
+margin_bottom = 20.0
+text = "Earth"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="CenterContainer/Planets/HBoxContainer2/HBoxContainer"]
+margin_top = 72.0
+margin_right = 200.0
+margin_bottom = 92.0
+
+[node name="Mars" type="Button" parent="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer4"]
+margin_right = 43.0
+margin_bottom = 20.0
+text = "Mars"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="CenterContainer/Planets/HBoxContainer2/HBoxContainer"]
+margin_top = 96.0
+margin_right = 200.0
+margin_bottom = 116.0
+
+[node name="Jupiter" type="Button" parent="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer5"]
+margin_right = 53.0
+margin_bottom = 20.0
+text = "Jupiter"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="CenterContainer/Planets/HBoxContainer2/HBoxContainer"]
+margin_top = 120.0
+margin_right = 200.0
+margin_bottom = 140.0
+
+[node name="Saturn" type="Button" parent="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer6"]
+margin_right = 52.0
+margin_bottom = 20.0
+text = "Saturn"
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="CenterContainer/Planets/HBoxContainer2/HBoxContainer"]
+margin_top = 144.0
+margin_right = 200.0
+margin_bottom = 164.0
+
+[node name="Uranus" type="Button" parent="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer7"]
+margin_right = 57.0
+margin_bottom = 20.0
+text = "Uranus"
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="CenterContainer/Planets/HBoxContainer2/HBoxContainer"]
+margin_top = 168.0
+margin_right = 200.0
+margin_bottom = 188.0
+
+[node name="Neptune" type="Button" parent="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer8"]
+margin_right = 67.0
+margin_bottom = 20.0
+text = "Neptune"
+
+[node name="Label" type="Label" parent="CenterContainer"]
+margin_left = 465.0
+margin_right = 558.0
+margin_bottom = 14.0
+text = "SOLAR SYSTEM"
+align = 1
+[connection signal="pressed" from="CenterContainer/Sun/HBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer/Mercury" to="." method="_on_Mercury_pressed"]
+[connection signal="pressed" from="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer/Mercury_Size1" to="." method="_on_Mercury_Size1_pressed"]
+[connection signal="pressed" from="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer/Mercury_Orbit" to="." method="_on_Mercury_Orbit_pressed"]
+[connection signal="pressed" from="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer2/Venus" to="." method="_on_Venus_pressed"]
+[connection signal="pressed" from="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer3/Earth" to="." method="_on_Earth_pressed"]
+[connection signal="pressed" from="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer4/Mars" to="." method="_on_Mars_pressed"]
+[connection signal="pressed" from="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer5/Jupiter" to="." method="_on_Jupiter_pressed"]
+[connection signal="pressed" from="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer6/Saturn" to="." method="_on_Saturn_pressed"]
+[connection signal="pressed" from="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer7/Uranus" to="." method="_on_Uranus_pressed"]
+[connection signal="pressed" from="CenterContainer/Planets/HBoxContainer2/HBoxContainer/HBoxContainer8/Neptune" to="." method="_on_Neptune_pressed"]
