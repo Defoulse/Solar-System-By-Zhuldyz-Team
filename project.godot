@@ -18,7 +18,3 @@ _global_script_class_icons={
 config/name="Solar System"
 run/main_scene="res://Scene/Space.tscn"
 config/icon="res://icon.png"
-
-[display]
-
-window/size/fullscreen=true
